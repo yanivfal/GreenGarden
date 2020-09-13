@@ -1,0 +1,172 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Watermelon",
+      "description": "Watermelon",
+      "imageUrl": "/assets/images/watermelon.jpg",
+      "price": 10,
+      "categories": [
+        "all",
+        "fruit"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Nana",
+      "description": "Nana",
+      "imageUrl": "/assets/images/nana.jpg",
+      "price": 10,
+      "categories": [
+        "all",
+        "fruit"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "cucumber",
+      "description": "cucumber",
+      "imageUrl": "/assets/images/cucamber.jpg",
+      "price": 10,
+      "categories": [
+        "all",
+        "vegetable"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "lettuce",
+      "description": "lettuce",
+      "imageUrl": "/assets/images/lettuce.jpg",
+      "price": 10,
+      "categories": [
+        "all",
+        "vegetable"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "cauliflower",
+      "description": "cauliflower",
+      "imageUrl": "/assets/images/cauliflower.jpg",
+      "price": 10,
+      "categories": [
+        "all",
+        "vegetable"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "broccoli",
+      "description": "broccoli",
+      "imageUrl": "/assets/images/broccoli.jpg",
+      "price": 10,
+      "categories": [
+        "all",
+        "vegetable"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "apple",
+      "description": "apple",
+      "imageUrl": "/assets/images/apple.jpg",
+      "price": 10,
+      "categories": [
+        "all",
+        "fruit"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "couscous",
+      "description": "couscous",
+      "imageUrl": "/assets/images/couscous.jpg",
+      "price": 10,
+      "categories": [
+        "all",
+        "dryFood"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "gnocchi",
+      "description": "gnocchi",
+      "imageUrl": "/assets/images/gnocchi.jpg",
+      "price": 10,
+      "categories": [
+        "all",
+        "dryFood"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "lapels",
+      "description": "lapels",
+      "imageUrl": "/assets/images/lapels.jpg",
+      "price": 10,
+      "categories": [
+        "all",
+        "dryFood"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "melon",
+      "description": "melon",
+      "imageUrl": "/assets/images/melon.jpg",
+      "price": 10,
+      "categories": [
+        "all",
+        "fruit"
+      ]
+    }
+  ],
+  "cart": [
+    {
+      "product": {
+        "id": 2,
+        "name": "Nana",
+        "description": "Nana",
+        "imageUrl": "/assets/images/nana.jpg",
+        "price": 10,
+        "categories": [
+          "all",
+          "fruit"
+        ]
+      },
+      "qty": 3,
+      "id": 1
+    },
+    {
+      "product": {
+        "id": 3,
+        "name": "cucumber",
+        "description": "cucumber",
+        "imageUrl": "/assets/images/cucamber.jpg",
+        "price": 10,
+        "categories": [
+          "all",
+          "vegetable"
+        ]
+      },
+      "qty": 1,
+      "id": 2
+    },
+    {
+      "product": {
+        "id": 4,
+        "name": "lettuce",
+        "description": "lettuce",
+        "imageUrl": "/assets/images/lettuce.jpg",
+        "price": 10,
+        "categories": [
+          "all",
+          "vegetable"
+        ]
+      },
+      "qty": 1,
+      "id": 3
+    }
+  ]
+}
