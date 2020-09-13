@@ -1,0 +1,108 @@
+<form [formGroup]="checkOutForm" class="needs-validation" novalidate>
+  <!--  personal-->
+  <h4 class="mb-3">Personal details</h4>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="inputFirstName">First name</label>
+      <input type="text" id="inputFirstName" class="form-control" formControlName="firstName" autofocus
+             [ngClass]="getValidationClasses('firstName')">
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="inputLastName">Last name</label>
+      <input type="text" id="inputLastName" class="form-control" formControlName="lastName" autofocus
+             [ngClass]="getValidationClasses('lastName')">
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="inputEmail">Email</label>
+    <input type="email" id="inputEmail" class="form-control" formControlName="email" autofocus
+           [ngClass]="getValidationClasses('email')">
+  </div>
+  <hr class="mb-4 mt-4">
+
+<!--  Address-->
+  <div class="mb-3">
+    <h4 class="mb-3">Address</h4>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="city">City</label>
+        <input type="text" id="city" class="form-control" formControlName="city" autofocus
+               [ngClass]="getValidationClasses('city')">
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="street">Street</label>
+        <input type="text" id="street" class="form-control" formControlName="street" autofocus
+               [ngClass]="getValidationClasses('street')">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="home_number">Home number</label>
+        <input type="text" id="home_number" class="form-control" formControlName="homeNumber" autofocus
+               [ngClass]="getValidationClasses('homeNumber')">
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="apartment">Apartment</label>
+        <input type="text" id="apartment" class="form-control" formControlName="apartment" autofocus
+               [ngClass]="getValidationClasses('apartment')">
+      </div>
+    </div>
+  </div>
+
+<!--  Payment-->
+  <hr class="mb-4">
+  <h4 class="mb-3">Payment</h4>
+
+  <div class="d-block my-3">
+    <div class="custom-control custom-radio">
+      <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+      <label class="custom-control-label" for="credit">Credit card</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+      <label class="custom-control-label" for="debit">Debit card</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+      <label class="custom-control-label" for="paypal">PayPal</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="cc-name">Name on card</label>
+      <input type="text" class="form-control" id="cc-name" placeholder="" required>
+      <small class="text-muted">Full name as displayed on card</small>
+      <div class="invalid-feedback">
+        Name on card is required
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="cc-number">Credit card number</label>
+      <input type="text" class="form-control" id="cc-number" placeholder="" required>
+      <div class="invalid-feedback">
+        Credit card number is required
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 mb-3">
+      <label for="cc-expiration">Expiration</label>
+      <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+      <div class="invalid-feedback">
+        Expiration date required
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="cc-cvv">CVV</label>
+      <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+      <div class="invalid-feedback">
+        Security code required
+      </div>
+    </div>
+  </div>
+  <hr class="mb-4">
+  <button class="btn btn-primary btn-lg btn-block" (click)="submit()">Confirm and pay</button>
+</form>

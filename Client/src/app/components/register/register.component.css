@@ -1,0 +1,34 @@
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-wrapper {
+  text-align: center!important;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.link:hover { color: #007bff; }

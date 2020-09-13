@@ -1,0 +1,24 @@
+<div class="card mb-4 shadow-sm">
+  <div class="card-img text-center">
+    <img class="bd-placeholder-img card-img-top p-2 img-responsive mt-3" width="100%" [src]='productItem.imageUrl'/>
+  </div>
+
+
+  <div class="card-body text-center">
+    <h3 class="card-text">
+      <strong>{{productItem.name}}</strong>
+    </h3>
+    <h4 class="card-text">{{ productItem.price | currency:'ILS' }}</h4>
+    <div class="border-0 align-middle text-center">
+      <i class="fa fa-minus m-3" aria-hidden="true" (click)="decreaseQuantity()"></i>
+      <strong>{{quantity}}</strong>
+      <i class="fa fa-plus m-3" aria-hidden="true" (click)="increaseQuantity()" ></i>
+    </div>
+    </div>
+    <div *ngIf="!isExistInCart" class="card-footer bg-primary text-center text-white" (click)="handleAddToCart()" id="footerButton">
+      <span><i class="fa fa-plus-circle mr-2" aria-hidden="true"></i>Add to Cart</span>
+    </div>
+    <div *ngIf="isExistInCart" class="card-footer bg-success text-center text-white">
+      <span><i class="fas fa-check-circle mr-2"></i>Product Added</span>
+    </div>
+</div>

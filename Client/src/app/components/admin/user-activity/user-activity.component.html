@@ -1,0 +1,40 @@
+<div class="container text-center">
+  <div class="row mb-4">
+    <div class="col-lg-6 offset-lg-3">
+      <form [formGroup]="searchData" (ngSubmit)="search(searchData.value.search)">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+                <i class="fas fa-search"></i>
+            </span>
+          </div>
+          <input class="form-control" type="search" aria-label="Search" formControlName="search">
+          <div class="input-group-append">
+            <button class="btn btn-success" type="submit">Search User</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <div class="row">
+    <table class="table">
+      <thead>
+      <tr class="alert-primary">
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Last Login</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let activity of usersActivityFiltered;">
+        <td>{{activity[0]}}</td>
+        <td>{{activity[1]}}</td>
+        <td>{{activity[2]}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+

@@ -1,0 +1,90 @@
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.link:hover { color: #007bff; }
+
+.upload-drop-zone {
+  height: 200px;
+  border-width: 2px;
+  margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+  color: cornflowerblue;
+  border-style: dashed;
+  border-color: cornflowerblue;
+  line-height: 200px;
+  text-align: center
+}
+.upload-drop-zone.drop {
+  color: red;
+  border-color: red;
+}
+
+
+.uploadfilecontainer {
+  background-image: url('../../../../assets/images/uploadFile.png');
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position: center;
+  height: 200px;
+  width: 100%;
+  margin: 20px auto;
+  border: 2px dashed #1C8ADB;
+  border-radius: 10px;
+}
+
+.uploadfilecontainer:hover {
+  cursor: pointer;
+  background-color: #9ecbec !important;
+  opacity: 0.8;
+}
+
+.files-list {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 10px auto;
+  background: #ffffff;
+  border: 1px dashed;
+  border-radius: 12px;
+  padding: 5px;
+  color: #1c8adb;
+}
+
+.files-list .delete-file {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.files-list .delete-file img {
+  width: 30px;
+}

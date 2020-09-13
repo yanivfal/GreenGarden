@@ -1,0 +1,30 @@
+<div class="form-wrapper">
+  <form class="form-signin" [formGroup]="addProductForm" autocomplete="off" novalidate>
+    <h3 class="h3 mb-3 font-weight-normal">Add Product</h3>
+    <input type="text" id="inputName" class="form-control" formControlName="name" placeholder="Product name" autofocus>
+
+
+    <input type="text" id="inputPrice" class="form-control" formControlName="price" placeholder="Price" autofocus>
+
+    <select class="form-control" id="selectCategory" formControlName="category">
+      <option hidden="hidden">Select category</option>
+      <option value="fruit">fruit</option>
+      <option value="vegetable">vegetable</option>
+      <option value="dryFood">dryFood</option>
+    </select>
+
+    <div class="uploadfilecontainer"  appDragAndDrop (click)="fileInput.click()"  (onFileDropped)="uploadFile($event)">
+      <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
+    </div>
+    <div  class="files-list" *ngIf="file">
+      <p> {{ file.name }} </p>
+      <button class="delete-file" (click)="deleteAttachment()">
+        <i class="fa fa-trash"></i>
+      </button>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="this.uploadProduct()" >Upload Product</button>
+  </form>
+</div>
+
+

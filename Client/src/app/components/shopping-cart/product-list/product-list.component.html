@@ -1,0 +1,46 @@
+<section>
+  <div class="container text-center">
+    <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+          <form [formGroup]="searchData" (ngSubmit) = "search(searchData.value.search)">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="fas fa-search"></i>
+                    </span>
+              </div>
+              <input class="form-control" type="search" aria-label="Search" formControlName="search">
+              <div class="input-group-append">
+                <button class="btn btn-success" type="submit">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>
+
+  <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="all-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true"
+         (click)="changeCategoryFilter('all')">All Products</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="vegetables-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false"
+         (click)="changeCategoryFilter('vegetable')">Vegetables</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="fruits-tab" data-toggle="tab" role="tab" aria-controls="contact" aria-selected="false"
+         (click)="changeCategoryFilter('fruit')">Fruits</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="dry-tab" data-toggle="tab" role="tab" aria-controls="contact" aria-selected="false"
+         (click)="changeCategoryFilter('dryFood')">Dry Food</a>
+    </li>
+  </ul>
+  <div class="row mt-4">
+    <div class="col-md-3 mb-3"*ngFor="let product of (productsList | filterByCategory: this.categoryFilter)">
+      <app-product-item [productItem] = product> </app-product-item>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-lg">
+      <a class="navbar-brand" href="#"><i class="fab fa-envira mr-2 text-success"></i>Green Garden</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/home"><i class="fas fa-home m-2"></i>Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/shop"><i class="fa fa-tag m-2" aria-hidden="true"></i>Shop</a>
+          </li>
+          <li class="nav-item active" *ngIf="isAdmin()">
+            <a class="nav-link" routerLink="/admin" aria-disabled="true"><i class="fa fa-lock m-2" aria-hidden="true"></i>Admin Area</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/admin" aria-disabled="true" routerLink="/cart" ><i class="fa fa-shopping-cart text-white m-2"></i>Cart
+              <span *ngIf="!(getNumberOfItemsInCart() === 0) && (isLoggedIn() | async) " class="badge badge-primary badge-size badge-pill ml-2">{{getNumberOfItemsInCart()}}</span></a>
+          </li>
+        </ul>
+        <button class="btn btn-outline-success" routerLink='/login' *ngIf="!(isLoggedIn() | async)">
+          <i class="fa fa-user-circle mr-2" aria-hidden="true"></i>Login</button>
+
+        <button class="btn btn-outline-success" (click)="logout()" *ngIf="isLoggedIn() | async">
+          <i class="fa fa-arrow-circle-left mr-2" aria-hidden="true"></i>Logout</button>
+      </div>
+    </nav>

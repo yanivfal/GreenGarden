@@ -1,0 +1,30 @@
+svg {
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.cart-icon {
+  margin-right: 20px;
+}
+
+.cart-button {
+  font-size:25px;
+  color: black;
+}
+
+img {
+  width: 80px;
+  height: 50px;
+}
+
+.badge-size {
+  font-size:12px;
+}
+
+/*.badge-notify{*/
+/*  position:relative;*/
+/*  top: -15px;*/
+/*  left: -15px;*/
+/*}*/
+
+

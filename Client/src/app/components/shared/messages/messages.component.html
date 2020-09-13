@@ -1,0 +1,11 @@
+<div *ngIf="(message$ | async)" class="container mt-5 text-center">
+  <div class="col-10 offset-1 col-md-4 offset-md-4">
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{message$ | async}}
+      <button type="button" class="close" (click)="clear()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+</div>
+

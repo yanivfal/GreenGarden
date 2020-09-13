@@ -1,0 +1,28 @@
+<div class="container shadow p-3 my-5 bg-white rounded">
+  <div class="px-4 px-lg-0" *ngIf="!((this.cartItems$ | async).length === 0)">
+    <div class="pb-1">
+      <div class="text-center">
+        <h2>Cart Items</h2>
+        <hr>
+      </div>
+      <div >
+        <div *ngFor="let item of (this.cartItems$ | async); let last = last;">
+          <app-cart-item [cartItem]="item"></app-cart-item>
+          <hr>
+        </div>
+        <div class="text-center">
+          <button routerLink="/checkout" class="btn btn-outline-success btn-lg" >{{ (this.cartTotal$ | async) | currency: 'ILS'}} - Continue to checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="px-4 px-lg-0" *ngIf="(this.cartItems$ | async).length === 0">
+    <div class="pb-5">
+      <div class="text-center">
+        <h2>There Are No Items In The Cart</h2>
+        <img src="assets/images/empty-cart.png">
+      </div>
+    </div>
+  </div>
+</div>
+

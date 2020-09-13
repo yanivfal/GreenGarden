@@ -1,0 +1,22 @@
+<div class="form-wrapper">
+  <form class="form-signin" [formGroup]="loginForm">
+    <img class="mb-1" src="/assets/images/logo.png" alt="" width="200" height="auto">
+    <h1 class="h3 mb-3 font-weight-normal">Please Login</h1>
+
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" formControlName="email" autofocus
+           [ngClass]="getValidationClasses('email')">
+
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" formControlName="password"
+           [ngClass]="getValidationClasses('password')">
+
+    <div class="custom-checkbox my-3">
+      <label>
+        <input type="checkbox" class="custom-checkbox mr-2" value="remember-me" formControlName="remember"> Remember me
+      </label>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="login()">Login</button>
+    <a class="link" routerLink='/register'>Not register?</a>
+  </form>
+</div>
+

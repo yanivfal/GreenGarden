@@ -1,0 +1,21 @@
+<div class="form-wrapper">
+  <form [formGroup]="regForm" class="form-signin" autocomplete="off" novalidate>
+    <img class="mb-1" src="/assets/images/logo.png" alt="" width="200" height="auto">
+    <h1 class="h3 mb-3 font-weight-normal">Please register</h1>
+    <input type="text" id="inputFirstName" class="form-control" placeholder="First name" formControlName="firstName" autofocus
+            [ngClass]="getValidationClasses('firstName')">
+
+
+    <input type="text" id="inputLastName" class="form-control" placeholder="Last name" formControlName="lastName" autofocus
+           [ngClass]="getValidationClasses('lastName')">
+
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" formControlName="email" autofocus
+           [ngClass]="getValidationClasses('email')">
+
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" formControlName="password"
+           [ngClass]="getValidationClasses('password')">
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="submitForm()">Register now</button>
+    <a class="link" routerLink='/login'>Already register?</a>
+  </form>
+</div>
