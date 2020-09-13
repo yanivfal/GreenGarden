@@ -1,0 +1,4 @@
+1. if you don't have redis installed on your computer please download it from: https://github.com/MicrosoftArchive/redis/releases/download/win-3.0.504/Redis-x64-3.0.504.msi
+2. run redis
+3. run npm install from the server-side directory
+4. run npm start from the server-side directory
